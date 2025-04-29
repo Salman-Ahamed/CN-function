@@ -61,6 +61,9 @@ const Button = ({ primary }: { primary?: boolean }) => {
 };
 ```
 
+<br/>
+<br/>
+
 ## 🔍 Examples & Use Cases
 
 ### 1️⃣ Conditional Boolean Classes
