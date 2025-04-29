@@ -28,17 +28,17 @@ export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 2. Make sure to install the required dependencies:
 
-```bash
-npm install clsx tailwind-merge
-```
+   ```bash
+   npm install clsx tailwind-merge
+   ```
 
-`or`
+   `or`
 
-```bash
-bun add clsx tailwind-merge
-```
+   ```bash
+   bun add clsx tailwind-merge
+   ```
 
-# 🚀 Usage
+## 🚀 Usage
 
 Import and use cn in your components to conditionally and cleanly apply Tailwind CSS classes.
 
@@ -118,7 +118,7 @@ type InputProps = {
   className?: string;
 };
 
-function Input({ hasError, disabled, className }: InputProps) {
+const Input = ({ hasError, disabled, className }: InputProps) => {
   return (
     <input
       disabled={disabled}
@@ -132,10 +132,10 @@ function Input({ hasError, disabled, className }: InputProps) {
       )}
     />
   );
-}
+};
 ```
 
-### 7️⃣ Use with Tailwind group, peer, focus, etc.
+### 7️⃣ Use with Tailwind group, peer, focus, etc
 
 ```tsx
 cn(
@@ -157,7 +157,7 @@ src/
 
 ```
 
-# 🤔 Why Use This?
+## 🤔 Why Use This?
 
 - 🧠 Avoid messy ternaries and string concatenation
 - 🛠️ Tailwind-aware: resolves conflicting utilities automatically
@@ -166,10 +166,12 @@ src/
 
 ## 📜 License
 
-###### MIT License — use freely in personal or commercial projects.
+MIT License — `use freely in personal or commercial projects`
 
 <h3 align="center">Happy coding! 🚀</h3>
 
 ---
+
+![cn Tailwind Class Combiner](./cn-cover.png)
 
 ---
