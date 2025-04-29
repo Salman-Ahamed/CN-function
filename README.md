@@ -50,21 +50,21 @@ Import and use cn in your components to conditionally and cleanly apply Tailwind
 
 Basic Example
 
-    ```tsx
-    import { cn } from "@/utils/cn";
+````tsx
+import { cn } from "@/utils/cn";
 
-    const Button = ({ primary }: { primary?: boolean }) => {
-    return (
-        <button
-        className={cn(
-            "px-4 py-2 rounded",
-            primary ? "bg-blue-500 text-white" : "bg-gray-300 text-black"
-        )}
-        >
-        Click me
-        </button>
-    );
-    };
+const Button = ({ primary }: { primary?: boolean }) => {
+return (
+    <button
+    className={cn(
+        "px-4 py-2 rounded",
+        primary ? "bg-blue-500 text-white" : "bg-gray-300 text-black"
+    )}
+    >
+    Click me
+    </button>
+);
+};
     ```
 
 <br/>
@@ -75,7 +75,7 @@ Basic Example
 
    ```tsx
    <div className={cn("font-medium", isActive && "text-blue-500")} />
-   ```
+````
 
 2. Using Object Syntax (clsx feature)
 
