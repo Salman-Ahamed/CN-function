@@ -1,17 +1,22 @@
-# `cn` Utility Function 🧩
+# 🧩 cn – Tailwind CSS Class Combiner
 
-A lightweight utility to simplify conditional and merged Tailwind CSS class management using `clsx` and `tailwind-merge`.
+A utility function that simplifies combining and conditionally applying Tailwind CSS classes using [`clsx`](https://www.npmjs.com/package/clsx) and [`tailwind-merge`](https://www.npmjs.com/package/tailwind-merge).
+
+---
 
 ## ✨ Features
 
-- Combines `clsx` and `tailwind-merge` in one reusable function.
-- Helps manage dynamic class names cleanly and efficiently.
-- Prevents conflicting Tailwind classes from being applied.
-- Improves readability of component styling logic.
+- ✅ Clean and readable class composition
+- ✅ Conditional styling with `clsx` logic
+- ✅ Intelligent class conflict resolution with `tailwind-merge`
+- ✅ Tiny and dependency-light
+- ✅ Works with strings, booleans, arrays, and object syntax
 
-## 📦 Installation
+---
 
-You can simply copy the `cn.ts` file into your utilities folder.
+## 🚀 Installation
+
+1. Copy the utility:
 
 ```ts
 // utils/cn.ts
@@ -21,7 +26,7 @@ import { twMerge } from "tailwind-merge";
 export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 ```
 
-#### Make sure to install the required dependencies:
+2. Make sure to install the required dependencies:
 
 ```bash
 npm install clsx tailwind-merge
@@ -39,69 +44,128 @@ Import and use cn in your components to conditionally and cleanly apply Tailwind
 
 ### ✅ Basic Example
 
-```ts
+```tsx
 import { cn } from "@/utils/cn";
 
-export default function Button({ isPrimary }: { isPrimary?: boolean }) {
+const Button = ({ primary }: { primary?: boolean }) => {
   return (
     <button
       className={cn(
-        "px-4 py-2 rounded text-white",
-        isPrimary ? "bg-blue-500" : "bg-gray-500"
+        "px-4 py-2 rounded",
+        primary ? "bg-blue-500 text-white" : "bg-gray-300 text-black"
       )}
     >
-      Click Me
+      Click me
     </button>
+  );
+};
+```
+
+## 🔍 Examples & Use Cases
+
+### 1️⃣ Conditional Boolean Classes
+
+```tsx
+<div className={cn("font-medium", isActive && "text-blue-500")} />
+```
+
+### 2️⃣ Using Object Syntax (clsx feature)
+
+```tsx
+<div
+  className={cn("p-4", {
+    "bg-red-500": isError,
+    "bg-green-500": isSuccess,
+    "text-white": isError || isSuccess,
+  })}
+/>
+```
+
+### 3️⃣ Conflict Resolution (tailwind-merge feature)
+
+```tsx
+cn("p-2", "p-4"); // → "p-4"
+cn("text-sm", "text-lg"); // → "text-lg"
+cn("bg-blue-500", "bg-red-500"); // → "bg-red-500"
+```
+
+### 4️⃣ Merging Static + Conditional
+
+```tsx
+cn(
+  "flex items-center gap-2",
+  isDarkMode && "bg-gray-900 text-white",
+  isRounded && "rounded-full"
+);
+```
+
+### 5️⃣ With Arrays (spread patterns)
+
+```tsx
+const classes = ["text-sm", isActive && "text-blue-500"];
+cn(...classes); // → "text-sm text-blue-500"
+```
+
+### 6️⃣ Reusable Component Example
+
+```tsx
+type InputProps = {
+  hasError?: boolean;
+  disabled?: boolean;
+  className?: string;
+};
+
+function Input({ hasError, disabled, className }: InputProps) {
+  return (
+    <input
+      disabled={disabled}
+      className={cn(
+        "px-3 py-2 border rounded-md outline-none transition",
+        {
+          "border-red-500 bg-red-50": hasError,
+          "opacity-50 cursor-not-allowed": disabled,
+        },
+        className
+      )}
+    />
   );
 }
 ```
 
-## 🧠 Use Case: Conditional Classes
+### 7️⃣ Use with Tailwind group, peer, focus, etc.
 
 ```tsx
-<div className={cn("p-4", isDarkMode && "bg-black text-white")} />
+cn(
+  "peer px-4 py-2 border",
+  isInvalid && "border-red-500",
+  "focus:outline-none focus:ring-2 focus:ring-blue-500"
+);
 ```
-
-## 🧹 Use Case: Tailwind Class Conflict Resolution
-
-Tailwind doesn't allow multiple conflicting classes like `p-2` and `p-4` — `tailwind-merge` ensures only the correct one is applied:
-
-```tsx
-cn("p-2", "p-4"); // ➝ "p-4"
-```
-
-## 🧱 Use Case: Combining Static + Dynamic Classes
-
-```tsx
-const isActive = true;
-const classes = cn("text-sm font-medium", isActive && "text-blue-500");
-
-<div className={classes}>Link</div>;
-```
-
-## 💡 Why use `cn`?
-
-- ✅ Clean code: Avoid messy ternaries and long string concatenations.
-- ✅ Tailwind-aware: Automatically handles class conflicts like `bg-red-500` vs `bg-blue-500`.
-- ✅ Readable: Makes UI components easier to understand and maintain.
 
 ## 📁 File Structure Suggestion
 
-Place this utility in a shared utilities folder:
-
 ```css
 src/
+├── app/
 ├── components/
-├── pages/
-├── utils/
-│   └── cn.ts
+├── lib/
+│   └── utils/
+│       └── cn.ts
 
 ```
 
+# 🤔 Why Use This?
+
+- 🧠 Avoid messy ternaries and string concatenation
+- 🛠️ Tailwind-aware: resolves conflicting utilities automatically
+- 💅 Keeps JSX/TSX clean and easy to read
+- 🔁 Reusable across the entire codebase
+
 ## 📜 License
 
-MIT License. Free to use and modify.
-Happy coding! 🚀
+###### MIT License — use freely in personal or commercial projects.
+
+<h3 align="center">Happy coding! 🚀</h3>
 
 ---
 
