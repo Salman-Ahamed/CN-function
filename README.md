@@ -172,6 +172,4 @@ src/
 
 ---
 
-###### Chaile ami ekta logo/cover image o design kore dite pari ei utility er jonno. Chao?
-
 ---
