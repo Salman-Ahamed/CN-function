@@ -75,8 +75,6 @@ const Button = ({ primary }: { primary?: boolean }) => {
    <div className={cn("font-medium", isActive && "text-blue-500")} />
    ```
 
-````
-
 2. Using Object Syntax (clsx feature)
 
    ```tsx
@@ -176,4 +174,3 @@ src/
 MIT License — `use freely in personal or commercial projects`
 
 <h3 align="center">Happy coding! 🚀</h3>
-````
