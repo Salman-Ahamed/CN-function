@@ -169,7 +169,7 @@ src/
 
 ## 📜 License
 
-MIT License — `use freely in personal or commercial projects`
+**MIT License — `use freely in personal or commercial projects`**
 
 ---
 
