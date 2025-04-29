@@ -1,3 +1,9 @@
+---
+
+![cn Tailwind Class Combiner](./cn-cover.png)
+
+---
+
 # _`cn`_ – Tailwind CSS Class Combiner
 
 A utility function that simplifies combining and conditionally applying Tailwind CSS classes using [`clsx`](https://www.npmjs.com/package/clsx) and [`tailwind-merge`](https://www.npmjs.com/package/tailwind-merge).
@@ -42,26 +48,25 @@ A utility function that simplifies combining and conditionally applying Tailwind
 
 Import and use cn in your components to conditionally and cleanly apply Tailwind CSS classes.
 
-### ✅ Basic Example
+Basic Example
 
-```tsx
-import { cn } from "@/utils/cn";
+    ```tsx
+    import { cn } from "@/utils/cn";
 
-const Button = ({ primary }: { primary?: boolean }) => {
-  return (
-    <button
-      className={cn(
-        "px-4 py-2 rounded",
-        primary ? "bg-blue-500 text-white" : "bg-gray-300 text-black"
-      )}
-    >
-      Click me
-    </button>
-  );
-};
-```
+    const Button = ({ primary }: { primary?: boolean }) => {
+    return (
+        <button
+        className={cn(
+            "px-4 py-2 rounded",
+            primary ? "bg-blue-500 text-white" : "bg-gray-300 text-black"
+        )}
+        >
+        Click me
+        </button>
+    );
+    };
+    ```
 
-<br/>
 <br/>
 
 ## 🧠 Examples & Use Cases
@@ -145,6 +150,8 @@ const Button = ({ primary }: { primary?: boolean }) => {
    );
    ```
 
+<br/>
+
 ## 📁 File Structure Suggestion
 
 ```css
@@ -169,9 +176,3 @@ src/
 MIT License — `use freely in personal or commercial projects`
 
 <h3 align="center">Happy coding! 🚀</h3>
-
----
-
-![cn Tailwind Class Combiner](./cn-cover.png)
-
----
