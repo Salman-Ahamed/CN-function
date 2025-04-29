@@ -18,8 +18,6 @@ A utility function that simplifies combining and conditionally applying Tailwind
 - Tiny and dependency-light
 - Works with strings, booleans, arrays, and object syntax
 
----
-
 ## 📦 Installation
 
 1. Copy the utility:
@@ -43,6 +41,8 @@ A utility function that simplifies combining and conditionally applying Tailwind
    ```bash
    bun add clsx tailwind-merge
    ```
+
+   ***
 
 ## 🚀 Usage
 
@@ -148,7 +148,7 @@ const Button = ({ primary }: { primary?: boolean }) => {
    );
    ```
 
-<br/>
+---
 
 ## 📁 File Structure Suggestion
 
@@ -174,3 +174,5 @@ src/
 MIT License — `use freely in personal or commercial projects`
 
 <h3 align="center">Happy coding! 🚀</h3>
+
+---
