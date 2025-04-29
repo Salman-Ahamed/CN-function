@@ -1,10 +1,8 @@
----
+# _`cn`_ – Tailwind CSS Class Combiner
 
 ![cn Tailwind Class Combiner](./cn-cover.png)
 
 ---
-
-# _`cn`_ – Tailwind CSS Class Combiner
 
 A utility function that simplifies combining and conditionally applying Tailwind CSS classes using [`clsx`](https://www.npmjs.com/package/clsx) and [`tailwind-merge`](https://www.npmjs.com/package/tailwind-merge).
 
