@@ -18,13 +18,13 @@ A utility function that simplifies combining and conditionally applying Tailwind
 
 1. Copy the utility:
 
-```ts
-// utils/cn.ts
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+   ```ts
+   // utils/cn.ts
+   import { clsx, type ClassValue } from "clsx";
+   import { twMerge } from "tailwind-merge";
 
-export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
-```
+   export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
+   ```
 
 2. Make sure to install the required dependencies:
 
