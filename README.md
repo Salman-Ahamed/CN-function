@@ -48,22 +48,22 @@ A utility function that simplifies combining and conditionally applying Tailwind
 
 Import and use cn in your components to conditionally and cleanly apply Tailwind CSS classes. `Basic Example`:
 
-````tsx
+```tsx
 import { cn } from "@/utils/cn";
 
 const Button = ({ primary }: { primary?: boolean }) => {
-return (
+  return (
     <button
-    className={cn(
+      className={cn(
         "px-4 py-2 rounded",
         primary ? "bg-blue-500 text-white" : "bg-gray-300 text-black"
-    )}
+      )}
     >
-    Click me
+      Click me
     </button>
-);
+  );
 };
-    ```
+```
 
 <br/>
 
@@ -73,6 +73,8 @@ return (
 
    ```tsx
    <div className={cn("font-medium", isActive && "text-blue-500")} />
+   ```
+
 ````
 
 2. Using Object Syntax (clsx feature)
@@ -174,3 +176,4 @@ src/
 MIT License — `use freely in personal or commercial projects`
 
 <h3 align="center">Happy coding! 🚀</h3>
+````
