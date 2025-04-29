@@ -171,6 +171,8 @@ src/
 
 MIT License — `use freely in personal or commercial projects`
 
+---
+
 <h3 align="center">Happy coding! 🚀</h3>
 
 ---
