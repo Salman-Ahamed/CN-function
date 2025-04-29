@@ -42,7 +42,7 @@ A utility function that simplifies combining and conditionally applying Tailwind
    bun add clsx tailwind-merge
    ```
 
-   ***
+---
 
 ## 🚀 Usage
 
