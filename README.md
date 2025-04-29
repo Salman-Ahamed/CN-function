@@ -46,9 +46,7 @@ A utility function that simplifies combining and conditionally applying Tailwind
 
 ## 🚀 Usage
 
-Import and use cn in your components to conditionally and cleanly apply Tailwind CSS classes.
-
-Basic Example
+Import and use cn in your components to conditionally and cleanly apply Tailwind CSS classes. `Basic Example`:
 
 ````tsx
 import { cn } from "@/utils/cn";
