@@ -24,13 +24,13 @@ export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 #### Make sure to install the required dependencies:
 
 ```bash
-    npm install clsx tailwind-merge
+npm install clsx tailwind-merge
 ```
 
 `or`
 
 ```bash
-    bun add clsx tailwind-merge
+bun add clsx tailwind-merge
 ```
 
 # 🚀 Usage
@@ -100,10 +100,11 @@ src/
 
 ## 📜 License
 
-###### MIT License. Free to use and modify.
-
+MIT License. Free to use and modify.
 Happy coding! 🚀
 
 ---
 
-Chaile ami ekta logo/cover image o design kore dite pari ei utility er jonno. Chao?
+###### Chaile ami ekta logo/cover image o design kore dite pari ei utility er jonno. Chao?
+
+---
